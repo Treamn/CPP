@@ -20,3 +20,9 @@ public:
         }
     }
 };
+
+
+int main(){
+    Solution ans;
+    cout << ans.kthGrammar(4,5) << endl;
+}
