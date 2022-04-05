@@ -1,17 +1,12 @@
 #include <iostream>
 using namespace std;
 
-void reset(int& i){
-    i = 0;
-}
-
 int main(){
-    // const int ci = 42;
-    // int i = ci;
-    // cout << i << endl;
-    // int * const p = &i;
-    // cout << *p << endl;
-    // *p = 0;
-    // cout << i << endl;
+    int a = 2;
+    int& r = a;
+    cout << a << endl;
+    r = 1;
+    cout << a << endl;
 
+    return 0;
 }
