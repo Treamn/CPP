@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
 class Screen{
@@ -28,3 +28,18 @@ char Screen::get(pos r, pos c) const{  // 在类的内部声明成inline
     pos row = r * width;  //计算行的位置
     return contents[row + c];  //返回给定字符
 }
+
+// class Screen{
+//     public:
+//         void some_member() const;
+//     private:
+//         mutable size_t access_ctr;
+// };
+// void Screen::some_member() const{
+//     ++access_ctr;
+// }
+
+class Windoe_mgr{
+    private:
+        std::vector<Screen> screens{Screen(24, 80, ' ')};
+};
