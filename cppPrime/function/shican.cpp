@@ -1,18 +1,18 @@
 #include <iostream>
-using namespace std;
+namespace N{
+    void f(int, int = 1);
+}
 
+using N::f;
+void g(){
+    f(7);
+    f();
+}
 
-void print(int a, int b, char c){
-    cout << a << endl;
-    cout << b << endl;
-    cout << c << endl;
-};
+namespace N{
+    void f(int = 2, int);
+}
 
-void print(int a, int b = 4, char c = 's');
-
-
-int main(){
-    print(1);
-
-    return 0;
+void h(){
+    f();
 }
