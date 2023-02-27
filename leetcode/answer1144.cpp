@@ -2,7 +2,7 @@
 #include<vector>
 #include<climits>
 using namespace std;
-
+// 别枚举奇数位和偶数位作为比相邻元素小的元素,然后计算所需的计算次数,取较小 值即可
 // class Solution {
 // public:
 //     int movesToMakeZigzag(vector<int>& nums) {
