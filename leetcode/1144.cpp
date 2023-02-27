@@ -10,6 +10,20 @@ public:
     int movesToMakeZigzag(vector<int>& nums) {
         int length = nums.size()-1;
         int cha[length]; //存储相邻两个元素之间的差值
+        bool status;
+
+        for(int i = 1; i < length -2; i++){
+            if((nums[i]-1 < nums[i]) && (nums[i] > nums[i+1])){
+                cout << "中间大: " << ' '<< nums[i-1] << ' '<< nums[i] << ' '<< nums[i+1] << endl;
+                status = true;
+            }else if((nums[i]-1 > nums[i]) && (nums[i] < nums[i+1])){
+                cout << "中间小" << ' '<< nums[i-1] << ' '<< nums[i] << ' '<< nums[i+1] << endl;
+                status = true;
+            }else{
+                status = false;
+                break;
+            }
+        }
 
         for(int i = 0; i < length; i++){
             cha[i] = nums[i] - nums[i+1];
@@ -19,20 +33,20 @@ public:
         //     cout << x << endl;
         // }
 
-        //判断是否需要计算
-        bool status;
-        for(int i = 1; i < length-1; i++){
-            if(cha[i-1] < 0 && cha[i] > 0){
-                cout << "cha[i-1] < 0 && cha[i] > 0" << endl;
-                status = true;
-            }else if(cha[i-1] > 0 && cha[i] < 0){
-                cout << "cha[i-1] > 0 && cha[i]" << endl;
-                status = true;
-            }else{
-                status = false;
-                break;
-            }
-        }
+        // //判断是否需要计算
+        // bool status;
+        // for(int i = 1; i < length-1; i++){
+        //     if(cha[i-1] < 0 && cha[i] > 0){
+        //         cout << "cha[i-1] < 0 && cha[i] > 0" << endl;
+        //         status = true;
+        //     }else if(cha[i-1] > 0 && cha[i] < 0){
+        //         cout << "cha[i-1] > 0 && cha[i]" << endl;
+        //         status = true;
+        //     }else{
+        //         status = false;
+        //         break;
+        //     }
+        // }
         // cout << status << endl;
 
         int sum0 = 0;
@@ -118,7 +132,7 @@ public:
 
 
 int main(){
-    vector<int> v1 {1,2,1,2,3};
+    vector<int> v1 {2,1,2,1,2};
     Solution s1;
     cout << s1.movesToMakeZigzag(v1);
     // s1.movesToMakeZigzag(v1);
