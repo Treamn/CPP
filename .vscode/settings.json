@@ -45,5 +45,6 @@
         "iterator": "cpp",
         "iomanip": "cpp",
         "bitset": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

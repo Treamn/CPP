@@ -7,5 +7,7 @@ void digits(){
 }
 
 int main(){
-    digits();
+    // digits();
+    int a;
+    cout << ++a;
 }
