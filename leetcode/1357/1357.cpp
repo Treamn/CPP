@@ -46,10 +46,33 @@ public:
 };
 
 
-// int main(){
-//     Cashier c1(3,50,);
-//     c1.get_value();
-// }
+
+void set_value(unordered_map<int, int> map, vector<int>& product, vector<int>& prices){
+    int length = product.size();
+    for(int i = 0; i < length; i++){
+        map[product[i]] = prices[i];
+    }
+}
+
+void get_value(unordered_map<int, int> price){
+    // cout << 'n' << n << '\n';
+    // cout << 'discount' << discount << '\n';
+    for(auto x = price.begin(); x != price.end(); x++){
+        cout << x->first << ',' << x->second << endl; 
+    }
+}
+
+int main(){
+    unordered_map<int, int> price;
+    vector<int> v1{1,2,3,4,5,6,7};
+    vector<int> v2{100,200,300,400,300,200,100};
+    set_value(price, v1, v2);
+    get_value(price);
+    // for(auto x = price.begin(); x != price.end(); ++x){
+    //     cout << x->first << ',' << x->second << endl; 
+    // }
+    return 0;
+}
 
 
 
