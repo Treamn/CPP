@@ -5,23 +5,16 @@ using namespace std;
 class Solution {
 public:
     int maxValue(vector<vector<int>>& grid) {
-        int x = grid.size(), y = grid[0].size();
-        vector<vector<int>> f(x+1, vector<int>(y+1, 0));
-        for(int i = 1; i <= x; i++){
-            for(int j = 1; j <= y; j++){
-                // cout << max(f[i-1][j], f[i][j-1]) << endl;
-                // cout << grid[i-1][j-1] << endl;
-                f[i][j] = max(f[i-1][j], f[i][j-1]) + grid[i-1][j-1];
-            }
-        }
+        int m = grid.size();
+        int n = grid[0].size();
+        vector<vector<int>> max_value(m+1, vector<int>(n+1, 0));
 
-        for(auto &i : f){
-            for(auto &j : i){
-                cout << j << ' ';
+        for(int i = 1; i <= m; i++){
+            for(int j = 1; j <= n; j++){
+                max_value[i][j] = max(max_value[i-1][j], max_value[i][j-1]) + grid[i-1][j-1];
             }
-            cout << endl;
         }
-        return f[x][y];
+        return max_value[m][n];
     }
 };
 
