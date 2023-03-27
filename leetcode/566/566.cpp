@@ -25,12 +25,12 @@ public:
             }
         }
 
-        // for(auto &x : ans){
-        //     for(auto &y : x){
-        //         cout << y << " ";
-        //     }
-        //     cout << endl;
-        // }
+        for(auto &x : ans){
+            for(auto &y : x){
+                cout << y << " ";
+            }
+            cout << endl;
+        }
 
         return ans;
     }
