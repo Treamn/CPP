@@ -14,10 +14,10 @@ public:
                 int diff = 0;
                 for(int k = 0; i+k < m && j+k < n; k++){
                     diff += s[i+k] == t[j+k] ? 0 : 1;
-                    if(diff > 1){
-                        break;;
-                    }else if(diff == 1){
+                    if(diff == 1){
                         ans++;
+                    }else if(diff > 1){
+                        break;
                     }
                 }
             }
