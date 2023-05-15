@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/whyy/Code/CPP/Data_struct/sort/mergesort/mergesort.cpp
+bits/c++config.h
+-
+cstddef
+-
+iostream
+-
+iterator
+-
+vector
+-
+limits
+-
+
