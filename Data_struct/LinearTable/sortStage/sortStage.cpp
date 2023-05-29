@@ -21,4 +21,5 @@ int ListInsert(SqList* L, int i, ElemType e){
     if(i < 1 || i > L->length+1){
         return 0;
     }
+    
 }
