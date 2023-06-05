@@ -22,5 +22,9 @@ int Sequential_Search2(int *a, int n, int key){
 
 int main(){
     int a[10]{0,1,2,3,4,5,6,7,8,9};
+    clock_t start, end;
+    start = clock();
     std::cout << Sequential_Search2(a, 10, 6);
+    end = clock();
+    std::cout << end - start;
 }
