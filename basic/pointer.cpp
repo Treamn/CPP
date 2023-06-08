@@ -1,17 +1,12 @@
 #include <iostream>
+#include <iterator>
 using namespace std;
 
 int main(){
-    int a = 10;
-    int *ip;
-    int *ptr = NULL;
-
-    ip = &a;
-
-    cout << a << endl;
-    cout << ip << endl;
-    cout << *ip << endl;
-    cout << ptr << endl;
-
-    return 0;
+    int a[]{0,1,2,3,4,5,6,7,8,9};
+    int *p = a;
+    // cout << end(a) << endl;
+    for( ; *p != a[9]; p++){
+        cout << *p << " ";
+    }
 }
